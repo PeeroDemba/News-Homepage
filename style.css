@@ -1,0 +1,555 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  margin: auto;
+  font-family: "Alata", sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  padding: 4rem 10vw 3rem 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header img {
+  width: 3rem;
+}
+header #menu {
+  display: none;
+}
+header .overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  display: none;
+}
+header #toggle {
+  display: none;
+  border: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #aaa;
+}
+header #toggle img {
+  display: none;
+}
+header #toggle ul {
+  list-style-type: none;
+}
+header #toggle ul li a {
+  color: white;
+  display: none;
+}
+header .navbar {
+  display: block;
+}
+header .navbar ul {
+  list-style-type: none;
+}
+header .navbar ul li {
+  display: inline-block;
+  width: 6rem;
+  text-align: right;
+}
+header .navbar ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+header .navbar ul li a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+main {
+  padding: 0 10vw;
+  min-height: 80vh;
+  padding-bottom: 5rem;
+}
+main .grid1 {
+  display: flex;
+  min-height: 28rem;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+main .grid1 .flex1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 75vw;
+  gap: 2rem;
+}
+main .grid1 .image {
+  grid-column: 1/span 2;
+}
+main .grid1 .image img {
+  width: 100%;
+}
+main .grid1 h1 {
+  grid-row: 2/span 1;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+main .grid1 .article {
+  grid-row: 2/span 1;
+}
+main .grid1 .article p {
+  margin-bottom: 2.5rem;
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+}
+main .grid1 .article a {
+  text-decoration: none;
+  padding: 0.9rem 1.7rem;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+}
+main .grid1 .article a:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+main .grid1 .flex2 {
+  min-height: 28rem;
+}
+main .grid1 .newslist {
+  background-color: hsl(240, 100%, 5%);
+  padding: 2rem 1.5rem;
+  height: 100%;
+}
+main .grid1 .newslist h2 {
+  color: hsl(35, 77%, 62%);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+main .grid1 .newslist h3 {
+  color: hsl(36, 100%, 99%);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  line-height: 1.5rem;
+}
+main .grid1 .newslist h3 a {
+  color: hsl(36, 100%, 99%);
+  text-decoration: none;
+}
+main .grid1 .newslist h3 a:hover {
+  color: hsl(35, 77%, 62%);
+}
+main .grid1 .newslist p {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+}
+main .grid1 .newslist .news2 {
+  border-top: 1px solid hsl(36, 100%, 99%);
+  border-bottom: 1px solid hsl(36, 100%, 99%);
+}
+main .grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  min-height: 5rem;
+}
+main .grid2 img {
+  width: 5rem;
+}
+main .grid2 .card1,
+main .grid2 .card2,
+main .grid2 .card3 {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
+}
+main .grid2 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .grid2 .text p:first-child {
+  color: #aaa;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+main .grid2 .text p:nth-child(2) {
+  color: hsl(240, 100%, 5%);
+  font-weight: 900;
+  line-height: 1.2rem;
+}
+main .grid2 .text p:nth-child(2) a {
+  color: hsl(240, 100%, 5%);
+  text-decoration: none;
+}
+main .grid2 .text p:nth-child(2) a:hover {
+  color: hsl(5, 85%, 63%);
+}
+main .grid2 .text p:last-child {
+  color: hwb(240 47% 52%);
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1279px) {
+  header {
+    padding: 4rem 5vw 3rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  main {
+    padding: 0 5vw;
+    min-height: 80vh;
+    padding-bottom: 5rem;
+  }
+  main .grid1 {
+    gap: 1.5rem;
+  }
+  main .grid1 .flex1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75rem;
+    gap: 1.5rem;
+  }
+  main .grid1 h1 {
+    grid-row: 2/span 1;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  main .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    min-height: 5rem;
+  }
+}
+@media (max-width: 1023px) {
+  main .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    min-height: 8rem;
+  }
+  main .grid2 .card1,
+  main .grid2 .card2,
+  main .grid2 .card3 {
+    gap: 0.7rem;
+  }
+  main .grid2 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .grid2 .text p:first-child {
+    color: #aaa;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  main .grid2 .text p:nth-child(2) {
+    color: hsl(240, 100%, 5%);
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+  main .grid2 .text p:last-child {
+    color: hwb(240 47% 52%);
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+  }
+}
+@media (max-width: 860px) {
+  header {
+    padding: 4rem 5vw 3rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  main {
+    padding: 0 5vw;
+    min-height: 80vh;
+    padding-bottom: 5rem;
+  }
+  main .grid1 h1 {
+    grid-row: 2/span 1;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
+  main .grid1 .newslist {
+    background-color: hsl(240, 100%, 5%);
+    padding: 2rem 1rem;
+    height: 100%;
+  }
+  main .grid1 .newslist h3 {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+  }
+  main .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    min-height: 10rem;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    min-height: 100vh;
+    margin: auto;
+    position: relative;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  header {
+    padding: 2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  header img {
+    width: 3rem;
+  }
+  header #menu {
+    display: block;
+  }
+  header .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0%;
+    display: none;
+  }
+  header #toggle {
+    height: 100%;
+    width: 70vw;
+    position: absolute;
+    top: 0;
+    left: 30vw;
+    background-color: white;
+  }
+  header #toggle .closeimg {
+    width: 100%;
+    padding: 2rem;
+  }
+  header #toggle img {
+    display: block;
+    width: 2.5rem;
+    margin-bottom: 4rem;
+    margin-left: calc(100% - 2rem);
+  }
+  header #toggle ul {
+    list-style-type: none;
+  }
+  header #toggle ul li {
+    padding: 1rem 0 1rem 2rem;
+  }
+  header #toggle ul li a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  header .navbar {
+    display: none;
+  }
+  header .navbar ul {
+    list-style-type: none;
+  }
+  header .navbar ul li {
+    display: inline-block;
+    padding-left: 2rem;
+  }
+  header .navbar ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  header .navbar ul li a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+  main {
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+  main .grid1 {
+    display: flex;
+    flex-direction: column;
+    min-height: 28rem;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  main .grid1 .flex1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90vw;
+    gap: 2rem;
+  }
+  main .grid1 .image {
+    grid-column: 1/span 1;
+  }
+  main .grid1 .image img {
+    width: 100%;
+  }
+  main .grid1 h1 {
+    grid-row: 2/span 1;
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  main .grid1 .article {
+    grid-row: 3/span 1;
+    margin-bottom: 2rem;
+  }
+  main .grid1 .article p {
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+  }
+  main .grid1 .article a {
+    text-decoration: none;
+    padding: 1rem 2.8rem;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    font-size: 0.8rem;
+  }
+  main .grid1 .article a:hover {
+    background-color: hsl(240, 100%, 5%);
+  }
+  main .grid1 .flex2 {
+    min-height: 25rem;
+  }
+  main .grid1 .newslist {
+    background-color: hsl(240, 100%, 5%);
+    padding: 2rem 2rem;
+    margin-bottom: 2rem;
+  }
+  main .grid1 .newslist h2 {
+    color: hsl(35, 77%, 62%);
+    margin-bottom: 2rem;
+  }
+  main .grid1 .newslist h3 {
+    color: hsl(36, 100%, 99%);
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+  main .grid1 .newslist h3 a {
+    color: hsl(36, 100%, 99%);
+    text-decoration: none;
+  }
+  main .grid1 .newslist h3 a:hover {
+    color: hsl(35, 77%, 62%);
+  }
+  main .grid1 .newslist p {
+    color: rgba(255, 253, 250, 0.7);
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+  }
+  main .grid1 .newslist .news2 {
+    border-top: 1px solid hsl(36, 100%, 99%);
+    border-bottom: 1px solid hsl(36, 100%, 99%);
+  }
+  main .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+    gap: 2rem;
+  }
+  main .grid2 .card1,
+  main .grid2 .card2,
+  main .grid2 .card3 {
+    gap: 2rem;
+  }
+  main .grid2 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .grid2 .text p:first-child {
+    color: hwb(240 47% 52%);
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  main .grid2 .text p:nth-child(2) {
+    color: hsl(240, 100%, 5%);
+    font-weight: 900;
+    font-size: 1.3rem;
+  }
+  main .grid2 .text p:nth-child(2) a {
+    color: hsl(240, 100%, 5%);
+    text-decoration: none;
+  }
+  main .grid2 .text p:nth-child(2) a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+  main .grid2 .text p:last-child {
+    color: hwb(240 47% 52%);
+    line-height: 1.2rem;
+  }
+}
+@media (max-width: 500px) {
+  main .grid2 {
+    min-height: 8rem;
+  }
+  main .grid2 .card1,
+  main .grid2 .card2,
+  main .grid2 .card3 {
+    gap: 0.7rem;
+  }
+  main .grid2 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .grid2 .text p:first-child {
+    color: #aaa;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  main .grid2 .text p:nth-child(2) {
+    color: hsl(240, 100%, 5%);
+    font-weight: 800;
+    font-size: 1rem;
+  }
+  main .grid2 .text p:last-child {
+    color: hwb(240 47% 52%);
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+}
